@@ -90,7 +90,10 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      // Navigate to home screen
+                      Navigator.pushReplacementNamed(context, '/home');
+                    },
                     child: const Text(
                       "Login",
                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
