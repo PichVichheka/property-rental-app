@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/login_screen.dart';
+import 'route/app-route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Login App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const LoginScreen(), // 👈 start from Login
+      title: 'Property Rental App',
+      initialRoute: AppRoutes.login,
+      routes: AppRoutes.routes,
     );
   }
 }

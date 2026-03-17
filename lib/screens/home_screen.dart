@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../route/app-route.dart';
+import '../components/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,10 +9,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Home")),
-      body: const Center(
-        child: Text(
-          "Welcome 🎉",
-          style: TextStyle(fontSize: 22),
+      body: Center(
+        child: CustomButton(
+          title: "Go to Profile", // text shown on the button
+          onPressed: () {
+            Navigator.pushNamed(
+              context,
+              AppRoutes.profile,   // go to ProfileScreen
+            );
+          },
         ),
       ),
     );

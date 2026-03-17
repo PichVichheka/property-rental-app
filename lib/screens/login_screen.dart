@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_rental_app/route/app-route.dart';
 import '../widgets/custom_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -90,10 +91,12 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, AppRoutes.home);   // 👈 HERE
+                    },
                     child: const Text(
                       "Login",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white),
                     ),
                   ),
                 ),
