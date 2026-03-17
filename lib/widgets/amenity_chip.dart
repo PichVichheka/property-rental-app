@@ -23,7 +23,7 @@ class AmenityChip extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           if (icon != null) ...[
-            Icon(icon, size: 16, color: Colors.green[700]),
+            Icon(icon, size: 16, color: Colors.green[400]),
             const SizedBox(width: 6),
           ],
           Text(
